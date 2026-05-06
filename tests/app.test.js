@@ -33,7 +33,7 @@ function hacerPeticion(path) {
 
 test('GET / devuelve 200 y un mensaje', async () => {
   const res = await hacerPeticion('/');
-  assert.strictEqual(res.statusCode, 999); // bug intencional
+  assert.strictEqual(res.statusCode, 200); // bug intencional
   const body = JSON.parse(res.body);
   assert.ok(body.mensaje, 'debe traer un campo mensaje');
   assert.ok(body.version, 'debe traer un campo version');
