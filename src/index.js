@@ -43,6 +43,17 @@ const server = http.createServer((req, res) => {
     return;
   }
 
+  if (req.url === '/aboutme') {
+  res.statusCode = 200;
+  res.end(JSON.stringify({
+    nombre: 'TU NOMBRE AQUÍ',
+    carrera: 'Arquitectura de Software',
+    universidad: 'Utadeo',
+    año: 2026
+  }));
+  return;
+}
+
   // =====================================================
   // ACTIVIDAD 1: agrega tu endpoint /aboutme aquí arriba
   // (antes de este comentario y del 404 de abajo)
